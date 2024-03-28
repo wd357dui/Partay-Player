@@ -327,7 +327,7 @@ $@"
 				Keys.Right.ToString().Equals(key, StringComparison.InvariantCultureIgnoreCase) ||
 				Keys.Down.ToString().Equals(key, StringComparison.InvariantCultureIgnoreCase))
 			{
-				FileIndex++;
+				FileIndex = int.Min(FileIndex + 1, Files.Count - 1);
 				Nav();
 			}
 			else if (
@@ -336,7 +336,7 @@ $@"
 				Keys.Left.ToString().Equals(key, StringComparison.InvariantCultureIgnoreCase) ||
 				Keys.Up.ToString().Equals(key, StringComparison.InvariantCultureIgnoreCase))
 			{
-				FileIndex--;
+				FileIndex = int.Max(FileIndex - 1, 0);
 				Nav();
 			}
 			else if (Keys.F.ToString().Equals(key, StringComparison.InvariantCultureIgnoreCase))
