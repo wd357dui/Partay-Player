@@ -11,9 +11,9 @@ A [WebView2](https://developer.microsoft.com/microsoft-edge/webview2/)-based med
  - <kbd>Space</kbd> or <kbd>Page Down</kbd> or <kbd>⏭</kbd> or <kbd>→</kbd> or <kbd>↓</kbd> - Go to next file
  - <kbd>Page Up</kbd> or <kbd>⏮</kbd> or <kbd>←</kbd> or <kbd>↑</kbd> - Go to previous file
  - <kbd>F</kbd> - Select a new file to set as current file
- - <kbd>C</kbd> - Enable/Disable controls for video and audio files and reload the current page
- - <kbd>L</kbd> - Enable/Disable looping for video and audio files and reload the current page (when looping is enabled, it will not automatically go to the next file)
- - <kbd>S</kbd> - Enable/Disable 7-second delay on non-video/audio/flash files and reload the current page
+ - <kbd>C</kbd> - Enable/Disable **controls** for video and audio files and reload the current page
+ - <kbd>L</kbd> - Enable/Disable **looping** for video and audio files and reload the current page (when looping is enabled, it will not automatically go to the next file)
+ - <kbd>S</kbd> - Enable/Disable **7-second delay** on non-video/audio/flash files and reload the current page
 
 # Installation
 
