@@ -1,4 +1,4 @@
-﻿namespace AngelParty
+﻿namespace PartayPlayer
 {
     partial class PartayPlayer
     {
@@ -44,14 +44,14 @@
             web.TabIndex = 0;
             web.ZoomFactor = 1D;
             // 
-            // AngelParty
+            // PartayPlayer
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1280, 720);
             Controls.Add(web);
-            Name = "AngelParty";
-            Text = "Angel Party";
+            Name = "PartayPlayer";
+            Text = "Partay Player";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)web).EndInit();
             ResumeLayout(false);

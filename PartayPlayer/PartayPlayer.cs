@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.StaticFiles;
 using System.Net;
 using System.Text.Json;
 
-namespace AngelParty
+namespace PartayPlayer
 {
 	public partial class PartayPlayer : Form
 	{
@@ -32,7 +32,7 @@ namespace AngelParty
 			foreach (FileInfo f in
 			from FileInfo file in new DirectoryInfo(Directory).EnumerateFiles()
 			where !file.Name.Equals("index.html", StringComparison.InvariantCultureIgnoreCase)
-			orderby file.CreationTime descending
+			orderby file.CreationTime ascending
 			select file
 			)
 			{

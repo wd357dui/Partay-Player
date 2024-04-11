@@ -1,4 +1,4 @@
-namespace AngelParty
+namespace PartayPlayer
 {
     internal static class Program
     {
