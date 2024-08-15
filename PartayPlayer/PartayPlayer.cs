@@ -19,7 +19,7 @@ namespace PartayPlayer
 		private Rectangle PreviousWindowedBounds;
 
 		private string enableTimeout = "true";
-		private string msTimeout = "7000";
+		readonly string msTimeout = "7000";
 		private string controls = "";
 		private string loop = "";
 
@@ -29,6 +29,8 @@ namespace PartayPlayer
 		private void FillFiles()
 		{
 			Files.Clear();
+			Dictionary<string, List<string>> Packed = [];
+			List<string> Empty = [];
 			foreach (FileInfo f in
 			from FileInfo file in new DirectoryInfo(Directory).EnumerateFiles()
 			where !file.Name.Equals("index.html", StringComparison.InvariantCultureIgnoreCase)
@@ -36,7 +38,20 @@ namespace PartayPlayer
 			select file
 			)
 			{
-				Files.Add(f.FullName);
+				string NameOnly = Path.GetFileNameWithoutExtension(f.Name);
+				string Key = NameOnly.Length >= 3 ? NameOnly[..3] : NameOnly;
+				if (!Packed.TryGetValue(Key, out List<string>? Pack))
+				{
+					Packed.Add(Key, Pack = Empty);
+					Empty = [];
+				}
+				Pack.Add(f.FullName);
+			}
+			var Packs = Packed.Values.ToArray();
+			new Random().Shuffle(Packs);
+			foreach (var Pack in Packs)
+			{
+				Files.AddRange(Pack);
 			}
 		}
 
